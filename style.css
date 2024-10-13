@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #E3F2FD;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.heading h2 {
+    color: tomato;
+    font-size: 2em;
+}
+
+.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #293447;
+    box-shadow: 0 20px 40px rgba(52,87,220,0.2);
+    margin-top: 10px;
+}
+
+.game-details {
+    color: tomato;
+    font-weight: 500;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.play-board {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background: black;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.play-board .food {
+    background: red;
+}
+
+.play-board .head {
+    background: yellowgreen;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.controls i {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+
+@media (max-width: 800px) {
+    .wrapper {
+        width: 90vmin;
+        height: 90vmin;
+    }
+
+    .controls i {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .game-details {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .heading h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 500px) {
+    .wrapper {
+        width: 85vmin;
+        height: 85vmin;
+    }
+
+    .play-board {
+        grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    }
+
+    .controls i {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .game-details {
+        font-size: 0.9em;
+    }
+
+    .heading h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper {
+        width: 80vmin;
+        height: 80vmin;
+    }
+
+    .play-board {
+        grid-template: repeat(30, 1fr) / repeat(30, 1fr); 
+    }
+
+    .controls i {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .game-details {
+        font-size: 0.8em;
+    }
+
+    .heading h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 360px) {
+    .wrapper {
+        width: 75vmin;
+        height: 75vmin;
+    }
+
+    .play-board {
+        grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+        width: 75vmin;
+        height: 75vmin;
+    }
+
+    .controls i {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .game-details {
+        font-size: 0.7em;
+    }
+
+    .heading h2 {
+        font-size: 1em;
+    }
+}
